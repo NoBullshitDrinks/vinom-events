@@ -24,7 +24,7 @@ const CSV_URL = "https://agenda-alerte-worker.lecoindalex.workers.dev/";
                   Si vide, la page ouvre la messagerie du demandeur avec le
                   message pré-rempli. Les deux fonctionnent. */
 const EMAIL_ALERTE = "vins@vinom.fr";
-const WORKER_URL   = "";
+const WORKER_URL   = "https://agenda-alerte-worker.lecoindalex.workers.dev/";
 
 const TYPES = {
   JV:   {nom:"Journée vigneron",     badge:"Journée",       couleur:"#1F4E79", occupeGDD2:true},
