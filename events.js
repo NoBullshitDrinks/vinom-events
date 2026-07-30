@@ -15,7 +15,16 @@
    Composantes séparées par des barres verticales.
    ========================================================= */
 
-const CSV_URL = "";
+const CSV_URL = "https://agenda-alerte-worker.lecoindalex.workers.dev/";
+
+/* Bouton « Signaler un événement »
+   EMAIL_ALERTE : destinataire des demandes d'ajout.
+   WORKER_URL   : si renseigné, la demande part directement depuis la page
+                  (Cloudflare Worker + Mailjet, voir worker-alerte-evenement.js).
+                  Si vide, la page ouvre la messagerie du demandeur avec le
+                  message pré-rempli. Les deux fonctionnent. */
+const EMAIL_ALERTE = "vins@vinom.fr";
+const WORKER_URL   = "";
 
 const TYPES = {
   JV:   {nom:"Journée vigneron",     badge:"Journée",       couleur:"#1F4E79", occupeGDD2:true},

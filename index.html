@@ -3,131 +3,106 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Agenda événements 6 mois — GDD2 Batignolles × VINOM</title>
+<title>Agenda 3 mois — GDD2 Batignolles × VINOM</title>
 <style>
 :root{
-  --bleu-nuit:#1F4E79; --bleu:#2E75B6; --jaune:#FFF2CC; --jaune-bord:#FFC000;
-  --vert:#70AD47; --vert-clair:#E8F3E0; --rouge:#C00000;
-  --gris:#5A6B7B; --gris-clair:#EDF1F5; --fond:#F5F7FA; --papier:#FFF; --trait:#D6DEE7;
-  --rayon:6px; --sans:ui-sans-serif,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  --bleu-nuit:#1F4E79; --bleu:#2E75B6; --bleu-pale:#DEEBF7; --jaune:#FFF2CC; --jaune-bord:#FFC000;
+  --gris:#5A6B7B; --gris-clair:#EDF1F5; --fond:#F5F7FA; --trait:#D6DEE7;
+  --sans:ui-sans-serif,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
 }
 *{box-sizing:border-box}
-body{margin:0;background:var(--fond);color:#1B2733;font-family:var(--sans);font-size:15px;line-height:1.5}
+body{margin:0;background:var(--fond);color:#1B2733;font-family:var(--sans);font-size:15px;line-height:1.45}
 a{color:var(--bleu)}
 :focus-visible{outline:2px solid var(--jaune-bord);outline-offset:2px}
 
-.bandeau{background:var(--bleu-nuit);color:#fff;padding:18px 22px 14px;position:sticky;top:0;z-index:50;box-shadow:0 2px 8px rgba(0,0,0,.18)}
+.bandeau{background:var(--bleu-nuit);color:#fff;padding:18px 22px 15px}
 .bandeau h1{margin:0;font-size:19px;font-weight:700;letter-spacing:.02em}
-.bandeau .sous{margin:3px 0 0;font-size:12.5px;color:#BBD3E8;letter-spacing:.03em}
+.bandeau .sous{margin:3px 0 0;font-size:12.5px;color:#BBD3E8}
 .barre{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:13px}
-.onglets{display:flex;gap:2px;background:rgba(255,255,255,.10);padding:3px;border-radius:var(--rayon)}
-.onglet{background:none;border:0;color:#D6E6F4;font:inherit;font-size:13.5px;font-weight:600;padding:6px 14px;border-radius:4px;cursor:pointer}
-.onglet:hover{background:rgba(255,255,255,.12);color:#fff}
-.onglet[aria-selected="true"]{background:#fff;color:var(--bleu-nuit)}
-.espace{flex:1}
-.btn{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.28);color:#fff;font:inherit;font-size:12.5px;font-weight:600;padding:6px 12px;border-radius:4px;cursor:pointer}
+.btn{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.28);color:#fff;font:inherit;font-size:12.5px;font-weight:600;padding:6px 12px;border-radius:4px;cursor:pointer;text-decoration:none}
 .btn:hover{background:rgba(255,255,255,.22)}
 .btn.plein{background:#fff;color:var(--bleu-nuit);border-color:#fff}
-select.btn{appearance:none;padding-right:26px;
-  background-image:linear-gradient(45deg,transparent 50%,#fff 50%),linear-gradient(135deg,#fff 50%,transparent 50%);
-  background-position:calc(100% - 14px) 12px,calc(100% - 9px) 12px;background-size:5px 5px;background-repeat:no-repeat}
-select.btn option{color:#1B2733}
-.bascule{display:flex;background:rgba(255,255,255,.10);padding:3px;border-radius:var(--rayon);gap:2px}
-.bascule button{background:none;border:0;color:#D6E6F4;font:inherit;font-size:12.5px;font-weight:600;padding:5px 11px;border-radius:4px;cursor:pointer}
-.bascule button[aria-pressed="true"]{background:var(--jaune-bord);color:#3A2A00}
 
-main{max-width:1080px;margin:0 auto;padding:22px 18px 60px}
-.vue{display:none}.vue.active{display:block}
+main{max-width:1120px;margin:0 auto;padding:22px 18px 60px}
 
-.reperes{background:var(--jaune);border-left:4px solid var(--jaune-bord);padding:11px 15px;border-radius:0 var(--rayon) var(--rayon) 0;margin:0 0 18px;font-size:13.5px}
-.reperes ul{margin:6px 0 0;padding-left:18px}
-.reperes li{margin:2px 0}
+.enveloppe{background:#fff;border:1px solid var(--trait);border-radius:6px;overflow:hidden}
+table{width:100%;border-collapse:collapse;table-layout:fixed}
+thead th{background:var(--bleu-nuit);color:#fff;padding:10px 12px;text-align:left;
+  font-size:12px;font-weight:700;letter-spacing:.07em;text-transform:uppercase}
+thead th:first-child{width:23%}
+tbody td{border-top:1px solid var(--trait);border-left:1px solid var(--gris-clair);padding:9px 10px;vertical-align:top}
+tbody td:first-child{border-left:0;background:var(--bleu-pale);font-weight:700;font-size:13.5px;line-height:1.3}
+tbody td:first-child .quoi{display:block;font-weight:400;font-size:11.5px;color:var(--gris);margin-top:2px}
 
-.filtres{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 18px}
-.filtre{background:#fff;border:1px solid var(--trait);color:var(--gris);font:inherit;font-size:12px;font-weight:600;padding:5px 11px;border-radius:20px;cursor:pointer}
-.filtre[aria-pressed="true"]{background:var(--bleu-nuit);border-color:var(--bleu-nuit);color:#fff}
+.jour{display:block;font-size:11px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--gris)}
+.num{display:block;font-size:26px;font-weight:700;line-height:1;color:var(--bleu-nuit);margin:1px 0 5px}
+.etiq{display:inline-block;font-size:10px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;
+  padding:2px 7px;border-radius:3px;color:#fff;margin-bottom:5px}
+.titre{display:block;font-size:13px;font-weight:700;line-height:1.3}
+.lieu{display:block;font-size:11.5px;color:var(--gris);margin-top:2px}
+.heure{display:block;font-size:11.5px;color:var(--gris)}
+ul.puces{margin:6px 0 0;padding:0;list-style:none}
+ul.puces li{font-size:11.5px;font-weight:600;padding-left:12px;position:relative;margin:2px 0;line-height:1.3}
+ul.puces li::before{content:"";position:absolute;left:0;top:6px;width:5px;height:5px;border-radius:50%;background:var(--bleu)}
+.creneau-libre{color:#9AA7B4;font-size:12px;font-style:italic}
+.cellule+.cellule{margin-top:11px;padding-top:11px;border-top:1px dashed var(--trait)}
 
-.mois{background:var(--papier);border:1px solid var(--trait);border-radius:var(--rayon);margin:0 0 16px;overflow:hidden}
-.mois-tete{background:var(--bleu);color:#fff;padding:9px 15px;display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
-.mois-tete h2{margin:0;font-size:15px;font-weight:700;letter-spacing:.06em;text-transform:uppercase}
-.mois-tete .compte{font-size:12px;color:#D6E6F4;font-weight:600}
-.mois-tete .quota{margin-left:auto;font-size:11px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;padding:2px 9px;border-radius:11px;background:rgba(255,255,255,.18)}
-.quota.plein{background:var(--jaune-bord);color:#3A2A00}
-.quota.libre{background:var(--vert);color:#fff}
-.quota.creux{background:rgba(255,255,255,.14);color:#D6E6F4}
-.vide{padding:15px;color:var(--gris);font-size:13.5px;font-style:italic}
+.bande{background:#fff;border:1px solid var(--trait);border-radius:6px;margin-top:16px;overflow:hidden}
+.bande h2{margin:0;background:var(--bleu);color:#fff;padding:8px 12px;font-size:12px;
+  font-weight:700;letter-spacing:.07em;text-transform:uppercase}
+.bande .contenu{padding:11px 12px}
+.bande .item{padding:7px 0;border-top:1px solid var(--gris-clair)}
+.bande .item:first-child{border-top:0;padding-top:0}
+.bande .item b{font-size:13.5px}
+.bande .item .info{font-size:12px;color:var(--gris)}
 
-.evt{display:grid;grid-template-columns:74px 8px 1fr;gap:0 12px;align-items:start;padding:11px 15px;border-top:1px solid var(--gris-clair)}
-.evt:first-child{border-top:0}
-.evt .jour{text-align:center;padding-top:1px}
-.evt .jour .num{display:block;font-size:21px;font-weight:700;line-height:1;color:var(--bleu-nuit)}
-.evt .jour .sem{display:block;font-size:10.5px;text-transform:uppercase;letter-spacing:.09em;color:var(--gris);margin-top:2px}
-.evt .jour .hr{display:block;font-size:11px;color:var(--gris);margin-top:3px;font-variant-numeric:tabular-nums}
-.evt .rail{width:4px;border-radius:2px;align-self:stretch}
-.evt .corps h3{margin:0;font-size:14.5px;font-weight:700;line-height:1.35}
-.evt .corps .meta{margin:3px 0 0;font-size:12.5px;color:var(--gris)}
-.evt .corps .meta span+span::before{content:" · "}
-.evt.passe{opacity:.45}
-.composantes{margin:7px 0 0;padding:0;list-style:none;display:flex;flex-wrap:wrap;gap:6px}
-.composantes li{font-size:12px;font-weight:600;background:var(--gris-clair);color:#2A3A48;padding:3px 9px 3px 8px;border-radius:3px;border-left:3px solid var(--bleu)}
-.etiq{display:inline-block;font-size:10.5px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;padding:2px 7px;border-radius:3px;vertical-align:2px;margin-right:7px;color:#fff}
+.reperes{background:var(--jaune);border-left:4px solid var(--jaune-bord);padding:10px 14px;
+  border-radius:0 6px 6px 0;margin:0 0 18px;font-size:13px}
 
-.rangs{background:#fff;border:1px dashed var(--gris);border-radius:var(--rayon);padding:12px 15px;margin:0 0 16px}
-.rangs h2{margin:0 0 8px;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--gris)}
-.rangs .item{padding:7px 0;border-top:1px solid var(--gris-clair)}
-.rangs .item:first-of-type{border-top:0}
-.rangs .item b{font-size:14px}
+.signal{background:#fff;border:1px solid var(--trait);border-radius:6px;margin-top:16px;overflow:hidden;scroll-margin-top:16px}
+.signal h2{margin:0;background:var(--bleu-nuit);color:#fff;padding:8px 12px;font-size:12px;font-weight:700;letter-spacing:.07em;text-transform:uppercase}
+.signal .intro{margin:0;padding:11px 12px 0;font-size:13px;color:var(--gris)}
+.signal .champs{display:grid;grid-template-columns:1fr 1fr;gap:10px 14px;padding:11px 12px}
+.signal label{display:block;font-size:11.5px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--gris)}
+.signal label.large{grid-column:1/-1}
+.signal .fac{font-weight:400;text-transform:none;letter-spacing:0;color:#9AA7B4}
+.signal input,.signal textarea{width:100%;margin-top:4px;font:inherit;font-size:14px;color:#1B2733;
+  border:1px solid var(--trait);border-radius:4px;padding:7px 9px;background:#FCFDFE;resize:vertical}
+.signal input:focus,.signal textarea:focus{border-color:var(--bleu);background:#fff}
+.signal .actions{display:flex;flex-wrap:wrap;gap:12px;align-items:center;padding:0 12px 14px}
+.envoi{background:var(--bleu-nuit);color:#fff;border:0;font:inherit;font-size:13.5px;font-weight:700;padding:9px 18px;border-radius:4px;cursor:pointer}
+.envoi:hover{background:#173D5F}
+.retour{font-size:12.5px;color:var(--gris)}
+.retour.ok{color:#3E6B22;font-weight:700}
+.retour.ko{color:#C00000;font-weight:700}
+@media (max-width:620px){.signal .champs{grid-template-columns:1fr}}
 
-.rail-legende{display:flex;flex-wrap:wrap;gap:14px;margin:0 0 16px;font-size:12.5px;color:var(--gris)}
-.rail-legende i{display:inline-block;width:13px;height:13px;border-radius:3px;vertical-align:-2px;margin-right:5px}
-.grille{padding:13px 15px 15px}
-.grille-jours{display:flex;flex-wrap:wrap;gap:6px}
-.creneau{min-width:56px;padding:6px 4px 7px;border-radius:5px;text-align:center;border:1px solid var(--trait);background:#fff}
-.creneau .d{display:block;font-size:16px;font-weight:700;line-height:1;color:var(--bleu-nuit)}
-.creneau .j{display:block;font-size:9.5px;text-transform:uppercase;letter-spacing:.08em;color:var(--gris);margin-top:2px}
-.creneau .t{display:block;font-size:9px;margin-top:4px;font-weight:700}
-.creneau.libre{border-color:var(--vert);background:var(--vert-clair)}
-.creneau.libre .t{color:#3E6B22}
-.creneau.option{border-style:dashed;border-color:#B8860B;background:#FFFBF0}
-.creneau.option .t{color:#8A6400}
-.creneau.pris{border-color:var(--bleu-nuit);background:var(--bleu-nuit)}
-.creneau.pris .d{color:#fff}.creneau.pris .j{color:#BBD3E8}.creneau.pris .t{color:#fff}
-.creneau.bloque{border-color:var(--rouge);background:#FDECEA}
-.creneau.bloque .t{color:var(--rouge)}
-.creneau.satur{background:var(--gris-clair);border-color:var(--trait)}
-.creneau.satur .d,.creneau.satur .t{color:#9AA7B4}
-.creneau.passe{opacity:.32}
-
-table{width:100%;border-collapse:collapse;background:#fff;font-size:13px}
-thead th{background:var(--bleu);color:#fff;text-align:left;padding:8px 10px;font-size:11px;text-transform:uppercase;letter-spacing:.06em;font-weight:700}
-tbody td{padding:8px 10px;border-top:1px solid var(--gris-clair);vertical-align:top}
-tbody tr:nth-child(even){background:#FAFCFE}
-td.date{white-space:nowrap;font-variant-numeric:tabular-nums;font-weight:600}
-.tab-enveloppe{border:1px solid var(--trait);border-radius:var(--rayon);overflow:hidden}
-
-footer{max-width:1080px;margin:0 auto;padding:0 18px 40px;color:var(--gris);font-size:12px}
+footer{max-width:1120px;margin:0 auto;padding:0 18px 40px;color:var(--gris);font-size:12px}
 footer hr{border:0;border-top:1px solid var(--trait);margin:0 0 12px}
 
 .entete-print{display:none}
 @media print{
-  @page{size:A4 portrait;margin:12mm 11mm}
-  body{background:#fff;font-size:11.5px}
-  .bandeau,.filtres,.rail-legende,.reperes,.no-print{display:none!important}
+  @page{size:A4 portrait;margin:11mm 10mm}
+  body{background:#fff;font-size:10px}
+  .bandeau,.reperes,footer{display:none!important}
   main{max-width:none;padding:0}
-  .vue{display:none!important}.vue.print-actif{display:block!important}
-  .mois{border:0;margin:0 0 8mm;break-inside:avoid;page-break-inside:avoid}
-  .mois.hors-impression{display:none!important}
-  .mois-tete,.etiq,.creneau,.composantes li{-webkit-print-color-adjust:exact;print-color-adjust:exact}
-  .entete-print{display:block!important;margin:0 0 6mm;border-bottom:2px solid #1F4E79;padding-bottom:3mm}
-  .entete-print h1{margin:0;font-size:16px;color:#1F4E79}
-  .entete-print p{margin:2px 0 0;font-size:10.5px;color:#5A6B7B}
-  .evt{padding:7px 0}
+  .enveloppe,.bande{border:1px solid #999;border-radius:0}
+  thead th,.bande h2,.etiq,tbody td:first-child,ul.puces li::before{
+    -webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .num{font-size:20px}
+  .entete-print{display:block!important;margin:0 0 5mm;border-bottom:2px solid #1F4E79;padding-bottom:3mm}
+  .entete-print h1{margin:0;font-size:15px;color:#1F4E79}
+  .entete-print p{margin:2px 0 0;font-size:10px;color:#5A6B7B}
+  tbody td{padding:6px 7px}
 }
-@media (max-width:620px){
-  .evt{grid-template-columns:56px 6px 1fr}
-  .evt .jour .num{font-size:18px}
-  .onglet{padding:6px 10px;font-size:12.5px}
-  thead th,tbody td{padding:6px 7px}
+@media (max-width:760px){
+  table,thead,tbody,tr,td,th{display:block;width:auto}
+  thead{display:none}
+  tbody td:first-child{border-radius:0}
+  tbody td{border-left:0}
+  tbody td[data-mois]::before{content:attr(data-mois);display:block;font-size:10.5px;font-weight:700;
+    letter-spacing:.08em;text-transform:uppercase;color:var(--gris);margin-bottom:5px}
+  thead th:first-child{width:auto}
 }
 @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
 </style>
@@ -135,299 +110,210 @@ footer hr{border:0;border-top:1px solid var(--trait);margin:0 0 12px}
 <body>
 
 <header class="bandeau">
-  <h1>Agenda événements — GDD2 Batignolles &amp; VINOM</h1>
-  <p class="sous">Six mois glissants · journées vigneron, Master Class, sorties clients, salons</p>
+  <h1>Agenda des trois prochains mois — GDD2 Batignolles &amp; VINOM</h1>
+  <p class="sous" id="sous"></p>
   <div class="barre">
-    <div class="onglets" role="tablist">
-      <button class="onglet" role="tab" aria-selected="true"  data-vue="agenda">Agenda 6 mois</button>
-      <button class="onglet" role="tab" aria-selected="false" data-vue="creneaux">Créneaux libres</button>
-      <button class="onglet" role="tab" aria-selected="false" data-vue="liste">Liste</button>
-    </div>
-    <div class="bascule">
-      <button id="mode-complet" aria-pressed="true">Complet</button>
-      <button id="mode-gdd" aria-pressed="false">Clients GDD</button>
-    </div>
-    <span class="espace"></span>
-    <select class="btn" id="mois-print" title="Mois à imprimer"></select>
     <button class="btn plein" id="btn-print">Imprimer</button>
-    <button class="btn" id="btn-ics">Télécharger .ics</button>
+    <a class="btn" href="agenda-6mois.html">Voir les six mois</a>
+    <a class="btn" href="#signal">Signaler un événement</a>
   </div>
 </header>
 
 <main>
   <div class="entete-print" id="entete-print"></div>
+  <div class="reperes">
+    Actualisé chaque mois. Fenêtre glissante sur les trois mois à venir : la vue complète sur six mois se trouve sur la page « Voir les six mois ».
+  </div>
+  <div class="enveloppe">
+    <table>
+      <thead><tr id="entetes"></tr></thead>
+      <tbody id="corps"></tbody>
+    </table>
+  </div>
+  <div id="rangs"></div>
+  <div id="apres"></div>
 
-  <section class="vue active" id="vue-agenda">
-    <div class="filtres no-print" id="filtres"></div>
-    <div id="rangs"></div>
-    <div id="agenda"></div>
-  </section>
-
-  <section class="vue" id="vue-creneaux">
-    <div class="reperes no-print">
-      <strong>Programmation GDD2</strong>
-      <ul>
-        <li>Jours privilégiés : lundi, mardi, mercredi. Jeudi en dernier recours.</li>
-        <li>Une soirée GDD2 par mois idéalement, deux au maximum.</li>
-        <li>Juillet et août : période creuse.</li>
-        <li>Une journée vigneron regroupe tournée, mini-salon et Master Class sur la même journée.</li>
-      </ul>
+  <section class="signal no-print" id="signal">
+    <h2>Signaler un événement à ajouter</h2>
+    <p class="intro">Une venue de vigneron, une soirée, un salon qui ne figure pas au planning ? Remplis les champs, la demande part par email.</p>
+    <div class="champs">
+      <label>Demandeur<input id="f-demandeur" type="text" autocomplete="name" placeholder="Votre nom"></label>
+      <label>Objet<input id="f-objet" type="text" placeholder="Master Class, tournée, mini-salon, salon…"></label>
+      <label>Vigneron ou domaine<input id="f-vigneron" type="text" placeholder="Nom du domaine"></label>
+      <label>Date ou période souhaitée<input id="f-periode" type="text" placeholder="Mardi 17 novembre, ou courant novembre"></label>
+      <label class="large">Précisions <span class="fac">— facultatif</span><textarea id="f-notes" rows="2"></textarea></label>
     </div>
-    <div class="rail-legende no-print">
-      <span><i style="background:#E8F3E0;border:1px solid #70AD47"></i>Libre</span>
-      <span><i style="background:#FFFBF0;border:1px dashed #B8860B"></i>Jeudi, en dernier recours</span>
-      <span><i style="background:#1F4E79"></i>Occupé</span>
-      <span><i style="background:#FDECEA;border:1px solid #C00000"></i>Bloqué</span>
-      <span><i style="background:#EDF1F5;border:1px solid #D6DEE7"></i>Quota du mois atteint</span>
-    </div>
-    <div id="creneaux"></div>
-  </section>
-
-  <section class="vue" id="vue-liste">
-    <div class="tab-enveloppe">
-      <table>
-        <thead><tr>
-          <th style="width:96px">Date</th><th style="width:104px">Type</th>
-          <th>Événement</th><th style="width:170px">Lieu</th><th style="width:70px">Public</th>
-        </tr></thead>
-        <tbody id="liste"></tbody>
-      </table>
+    <div class="actions">
+      <button class="envoi" id="btn-signal">Envoyer la demande</button>
+      <span class="retour" id="signal-retour" role="status" aria-live="polite"></span>
     </div>
   </section>
 </main>
 
-<footer class="no-print"><hr><p id="pied"></p></footer>
+<footer><hr><p id="pied"></p></footer>
 
 <script src="events.js"></script>
 <script>
-let donnees = [], rangs = [], mode = "complet";
-let typesActifs = new Set(Object.keys(TYPES));
-let moisFenetre = [];
+let fenetre = [];
 
-const visible = e => typesActifs.has(e.Type) &&
-  (mode === "complet" || ["B2C","Mixte"].includes(e.Public));
-
+/* Les trois mois à venir, à partir du mois prochain. */
 function construireFenetre(){
-  moisFenetre = [];
-  const base = new Date(AUJOURDHUI.getFullYear(), AUJOURDHUI.getMonth(), 1);
-  for(let i=0;i<6;i++) moisFenetre.push(new Date(base.getFullYear(), base.getMonth()+i, 1));
+  fenetre = [];
+  const base = new Date(AUJOURDHUI.getFullYear(), AUJOURDHUI.getMonth()+1, 1);
+  for(let i=0;i<3;i++) fenetre.push(new Date(base.getFullYear(), base.getMonth()+i, 1));
 }
 
-function rendreAgenda(){
-  document.getElementById("agenda").innerHTML = moisFenetre.map(m => {
-    const k = cleMois(m);
-    const evts = donnees.filter(e => cleMois(e._d) === k && visible(e));
-    const nb = donnees.filter(e => cleMois(e._d) === k && TYPES_QUOTA.includes(e.Type)).length;
-    const creux = REGLES.moisCreux.includes(m.getMonth());
-    const reste = REGLES.quota - nb;
-
-    let quota, cls;
-    if(creux){ quota = "Période creuse"; cls = "creux"; }
-    else if(reste <= 0){ quota = "Quota GDD2 atteint"; cls = "plein"; }
-    else { quota = reste + " soirée" + (reste>1?"s":"") + " GDD2 disponible" + (reste>1?"s":""); cls = "libre"; }
-
-    const corps = evts.length ? evts.map(ligne).join("")
-      : `<p class="vide">${creux ? "Période creuse." : "Aucun événement programmé."}</p>`;
-
-    return `<section class="mois" data-mois="${k}">
-      <div class="mois-tete">
-        <h2>${MOIS[m.getMonth()]} ${m.getFullYear()}</h2>
-        <span class="compte">${evts.length} événement${evts.length>1?"s":""}</span>
-        <span class="quota ${cls}">${quota}</span>
-      </div>
-      <div>${corps}</div></section>`;
-  }).join("");
-}
-
-function ligne(e){
+function cellule(e){
   const t = TYPES[e.Type];
-  const heure = e.Heure_debut ? e.Heure_debut + (e.Heure_fin ? "–"+e.Heure_fin : "") : "";
-  const meta = [];
-  if(e.Fournisseur && e.Fournisseur !== e.Titre) meta.push(echappe(e.Fournisseur));
-  if(e.Lieu) meta.push(echappe(e.Lieu));
-  if(e.Jauge) meta.push(echappe(e.Jauge) + " places");
   const p = puces(e);
-  const lien = e.Lien ? `<p class="meta"><a href="${echappe(e.Lien)}" target="_blank" rel="noopener">${echappe(e.Lien)}</a></p>` : "";
-
-  return `<article class="evt ${e._d < AUJOURDHUI ? "passe" : ""}">
-    <div class="jour">
-      <span class="num">${e._d.getDate()}</span>
-      <span class="sem">${JOURS[e._d.getDay()]}</span>
-      ${heure ? `<span class="hr">${echappe(heure)}</span>` : ""}
-    </div>
-    <div class="rail" style="background:${t.couleur}"></div>
-    <div class="corps">
-      <h3><span class="etiq" style="background:${t.couleur}">${t.badge}</span>${echappe(e.Titre)}</h3>
-      ${meta.length ? `<p class="meta">${meta.map(x=>`<span>${x}</span>`).join("")}</p>` : ""}
-      ${p.length ? `<ul class="composantes">${p.map(x=>`<li>${echappe(x)}</li>`).join("")}</ul>` : ""}
-      ${lien}
-    </div></article>`;
+  const heure = e.Heure_debut ? e.Heure_debut + (e.Heure_fin ? "–"+e.Heure_fin : "") : "";
+  return `<div class="cellule">
+    <span class="jour">${JOURS_LONG[e._d.getDay()]}</span>
+    <span class="num">${e._d.getDate()}</span>
+    <span class="etiq" style="background:${t.couleur}">${t.badge}</span>
+    <span class="titre">${echappe(e.Titre)}</span>
+    ${e.Lieu ? `<span class="lieu">${echappe(e.Lieu)}</span>` : ""}
+    ${heure ? `<span class="heure">${echappe(heure)}</span>` : ""}
+    ${p.length ? `<ul class="puces">${p.map(x=>`<li>${echappe(x)}</li>`).join("")}</ul>` : ""}
+  </div>`;
 }
 
-function rendreRangs(){
-  const vis = rangs.filter(visible);
-  document.getElementById("rangs").innerHTML = vis.length ? `<div class="rangs">
+function rendreGrille(donnees){
+  const debut = fenetre[0];
+  const fin = new Date(fenetre[2].getFullYear(), fenetre[2].getMonth()+1, 0);
+  const dedans = donnees.filter(e => e._d >= debut && e._d <= fin);
+
+  document.getElementById("entetes").innerHTML =
+    `<th>Domaine / salon</th>` +
+    fenetre.map(m => `<th>${MOIS[m.getMonth()]} ${m.getFullYear()}</th>`).join("");
+
+  /* une ligne par domaine ou salon, triée par première date */
+  const groupes = new Map();
+  dedans.forEach(e => {
+    const k = e.Fournisseur || e.Titre;
+    if(!groupes.has(k)) groupes.set(k, []);
+    groupes.get(k).push(e);
+  });
+  const lignes = [...groupes.entries()].sort((a,b) => a[1][0]._d - b[1][0]._d);
+
+  document.getElementById("corps").innerHTML = lignes.length ? lignes.map(([nom, evts]) => {
+    const nature = [...new Set(evts.map(e => TYPES[e.Type].nom))].join(", ");
+    const cases = fenetre.map(m => {
+      const k = cleMois(m);
+      const dedansMois = evts.filter(e => cleMois(e._d) === k);
+      const libelle = MOIS[m.getMonth()] + " " + m.getFullYear();
+      return `<td data-mois="${libelle}">${
+        dedansMois.length ? dedansMois.map(cellule).join("") : ""
+      }</td>`;
+    }).join("");
+    return `<tr><td>${echappe(nom)}<span class="quoi">${echappe(nature)}</span></td>${cases}</tr>`;
+  }).join("")
+  : `<tr><td colspan="4" style="padding:20px;color:var(--gris);font-style:italic">Aucun événement programmé sur les trois prochains mois.</td></tr>`;
+
+  return dedans.length;
+}
+
+function rendreRangs(rangs){
+  document.getElementById("rangs").innerHTML = rangs.length ? `<div class="bande">
     <h2>Sur les rangs — date non arrêtée</h2>
-    ${vis.map(e => {
+    <div class="contenu">${rangs.map(e => {
       const p = puces(e);
       return `<div class="item"><b>${echappe(e.Titre)}</b>
-        ${p.length ? `<ul class="composantes">${p.map(x=>`<li>${echappe(x)}</li>`).join("")}</ul>` : ""}
-      </div>`;
-    }).join("")}</div>` : "";
+        ${p.length ? `<ul class="puces">${p.map(x=>`<li>${echappe(x)}</li>`).join("")}</ul>` : ""}</div>`;
+    }).join("")}</div></div>` : "";
 }
 
-function rendreCreneaux(){
-  document.getElementById("creneaux").innerHTML = moisFenetre.map(m => {
-    const k = cleMois(m);
-    const creux = REGLES.moisCreux.includes(m.getMonth());
-    const dansMois = donnees.filter(e => cleMois(e._d) === k);
-    const nb = dansMois.filter(e => TYPES_QUOTA.includes(e.Type)).length;
-    const satur = nb >= REGLES.quota;
-
-    const occupe = {};
-    dansMois.filter(e => TYPES[e.Type].occupeGDD2).forEach(e => {
-      const c = cleDate(e._d); (occupe[c] = occupe[c] || []).push(e);
-    });
-
-    let chips = "";
-    if(creux){
-      chips = `<p class="vide" style="padding:4px 0">Période creuse.</p>`;
-    } else {
-      const fin = new Date(m.getFullYear(), m.getMonth()+1, 0).getDate();
-      for(let j=1;j<=fin;j++){
-        const d = new Date(m.getFullYear(), m.getMonth(), j), jj = d.getDay();
-        const priv = REGLES.joursPrivilegies.includes(jj), opt = REGLES.joursOption.includes(jj);
-        if(!priv && !opt) continue;
-        const pris = occupe[cleDate(d)];
-        let cls, txt;
-        if(pris){
-          const bloq = pris.find(e => e.Type === "PRIV" || e.Type === "FERM");
-          cls = bloq ? "bloque" : "pris";
-          txt = TYPES[(bloq || pris[0]).Type].badge;
-        } else if(satur){ cls = "satur"; txt = "quota"; }
-        else { cls = priv ? "libre" : "option"; txt = priv ? "libre" : "repli"; }
-        if(d < AUJOURDHUI) cls += " passe";
-        const titre = pris ? pris.map(e => e.Titre).join(" — ") : "";
-        chips += `<div class="creneau ${cls}"${titre?` title="${echappe(titre)}"`:""}>
-          <span class="d">${j}</span><span class="j">${JOURS[jj]}</span><span class="t">${txt}</span></div>`;
-      }
-    }
-    return `<section class="mois" data-mois="${k}">
-      <div class="mois-tete"><h2>${MOIS[m.getMonth()]} ${m.getFullYear()}</h2>
-        <span class="compte">${nb} soirée${nb>1?"s":""} sur ${REGLES.quota}</span></div>
-      <div class="grille"><div class="grille-jours">${chips}</div></div></section>`;
-  }).join("");
+function rendreApres(donnees){
+  const fin = new Date(fenetre[2].getFullYear(), fenetre[2].getMonth()+1, 0);
+  const apres = donnees.filter(e => e._d > fin);
+  document.getElementById("apres").innerHTML = apres.length ? `<div class="bande">
+    <h2>Déjà calé au-delà de la fenêtre</h2>
+    <div class="contenu">${apres.map(e => {
+      const t = TYPES[e.Type], p = puces(e);
+      return `<div class="item">
+        <span class="etiq" style="background:${t.couleur}">${t.badge}</span>
+        <b>${JOURS_LONG[e._d.getDay()]} ${e._d.getDate()} ${MOIS[e._d.getMonth()]} ${e._d.getFullYear()} — ${echappe(e.Titre)}</b>
+        ${e.Lieu ? `<div class="info">${echappe(e.Lieu)}</div>` : ""}
+        ${p.length ? `<ul class="puces">${p.map(x=>`<li>${echappe(x)}</li>`).join("")}</ul>` : ""}</div>`;
+    }).join("")}</div></div>` : "";
 }
 
-function rendreListe(){
-  const rows = donnees.filter(visible);
-  document.getElementById("liste").innerHTML = rows.length ? rows.map(e => {
-    const t = TYPES[e.Type], d = e._d, p = puces(e);
-    return `<tr>
-      <td class="date">${String(d.getDate()).padStart(2,"0")}/${String(d.getMonth()+1).padStart(2,"0")}/${d.getFullYear()}<br>
-        <span style="font-weight:400;color:var(--gris);font-size:11.5px">${JOURS_LONG[d.getDay()]}${e.Heure_debut?" · "+echappe(e.Heure_debut):""}</span></td>
-      <td><span class="etiq" style="background:${t.couleur}">${t.badge}</span></td>
-      <td><b>${echappe(e.Titre)}</b>${p.length?`<ul class="composantes">${p.map(x=>`<li>${echappe(x)}</li>`).join("")}</ul>`:""}</td>
-      <td>${echappe(e.Lieu)}</td><td>${echappe(e.Public)}</td></tr>`;
-  }).join("") : `<tr><td colspan="5" class="vide">Aucun événement pour ces filtres.</td></tr>`;
-}
-
-function rendreFiltres(){
-  const c = document.getElementById("filtres");
-  c.innerHTML = Object.entries(TYPES).map(([k,t]) =>
-    `<button class="filtre" data-type="${k}" aria-pressed="true">
-      <span style="display:inline-block;width:8px;height:8px;border-radius:2px;background:${t.couleur};margin-right:6px"></span>${t.nom}</button>`).join("");
-  c.querySelectorAll(".filtre").forEach(b => b.addEventListener("click", () => {
-    const on = b.getAttribute("aria-pressed") === "true";
-    b.setAttribute("aria-pressed", String(!on));
-    on ? typesActifs.delete(b.dataset.type) : typesActifs.add(b.dataset.type);
-    rendreTout();
-  }));
-}
-
-function genererICS(){
-  const pad = n => String(n).padStart(2,"0");
-  const jour = d => d.getFullYear()+pad(d.getMonth()+1)+pad(d.getDate());
-  const plie = l => l.match(/.{1,72}/g).join("\r\n ");
-  const esc = s => String(s??"").replace(/\\/g,"\\\\").replace(/;/g,"\\;").replace(/,/g,"\\,").replace(/\r?\n/g,"\\n");
-  const L = ["BEGIN:VCALENDAR","VERSION:2.0","PRODID:-//VINOM//Agenda GDD2//FR","CALSCALE:GREGORIAN",
-    "METHOD:PUBLISH","X-WR-CALNAME:Événements GDD2 × VINOM","X-WR-TIMEZONE:Europe/Paris"];
-
-  donnees.forEach((e,i) => {
-    const t = TYPES[e.Type], fin = new Date(e._d); fin.setDate(fin.getDate()+1);
-    const desc = [e.Fournisseur, e.Lieu, puces(e).join(" · "), e.Lien].filter(Boolean).join("\n");
-    L.push("BEGIN:VEVENT", "UID:"+cleDate(e._d)+"-"+e.Type+"-"+i+"@vinom-events",
-           "DTSTAMP:"+jour(AUJOURDHUI)+"T000000Z");
-    if(/^\d{1,2}:\d{2}$/.test(e.Heure_debut||"")){
-      const [h,mn] = e.Heure_debut.split(":");
-      const [h2,mn2] = (/^\d{1,2}:\d{2}$/.test(e.Heure_fin||"") ? e.Heure_fin : (Number(h)+2)+":"+mn).split(":");
-      L.push("DTSTART;TZID=Europe/Paris:"+jour(e._d)+"T"+pad(h)+pad(mn)+"00",
-             "DTEND;TZID=Europe/Paris:"+jour(e._d)+"T"+pad(h2)+pad(mn2)+"00");
-    } else {
-      L.push("DTSTART;VALUE=DATE:"+jour(e._d), "DTEND;VALUE=DATE:"+jour(fin));
-    }
-    L.push(plie("SUMMARY:"+esc(t.badge+" — "+e.Titre)));
-    if(e.Lieu) L.push(plie("LOCATION:"+esc(e.Lieu)));
-    if(desc) L.push(plie("DESCRIPTION:"+esc(desc)));
-    L.push("STATUS:CONFIRMED","END:VEVENT");
-  });
-  L.push("END:VCALENDAR");
-
-  const a = document.createElement("a");
-  a.href = URL.createObjectURL(new Blob([L.join("\r\n")], {type:"text/calendar;charset=utf-8"}));
-  a.download = "evenements-gdd2-vinom.ics"; a.click();
-  setTimeout(() => URL.revokeObjectURL(a.href), 2000);
-}
-
-function rendreSelecteur(){
-  const s = document.getElementById("mois-print");
-  s.innerHTML = `<option value="tous">Les 6 mois</option>` +
-    moisFenetre.map(m => `<option value="${cleMois(m)}">${MOIS[m.getMonth()]} ${m.getFullYear()}</option>`).join("");
-  const p = moisFenetre.find(m => !REGLES.moisCreux.includes(m.getMonth()));
-  if(p) s.value = cleMois(p);
-}
-
-function imprimer(){
-  const choix = document.getElementById("mois-print").value;
-  const vue = document.querySelector(".vue.active");
-  document.querySelectorAll(".vue").forEach(v => v.classList.remove("print-actif"));
-  vue.classList.add("print-actif");
-  document.querySelectorAll(".mois").forEach(b =>
-    b.classList.toggle("hors-impression", choix !== "tous" && b.dataset.mois !== choix));
-  const lib = choix === "tous" ? "Six mois"
-    : (() => { const [a,mm] = choix.split("-"); return MOIS[+mm-1]+" "+a; })();
+document.getElementById("btn-print").addEventListener("click", () => {
   document.getElementById("entete-print").innerHTML =
-    `<h1>Les Gouttes de Dieu Batignolles × VINOM — ${vue.id === "vue-creneaux" ? "créneaux disponibles" : "événements"}</h1>
-     <p>${lib} — édité le ${new Date().toLocaleDateString("fr-FR")}</p>`;
+    `<h1>Les Gouttes de Dieu Batignolles × VINOM — agenda des trois prochains mois</h1>
+     <p>${fenetre.map(m => MOIS[m.getMonth()]).join(" · ")} ${fenetre[2].getFullYear()} — édité le ${new Date().toLocaleDateString("fr-FR")}</p>`;
   window.print();
-}
+});
 
-function rendreTout(){
-  rendreRangs(); rendreAgenda(); rendreCreneaux(); rendreListe();
-  document.getElementById("pied").textContent =
-    `${donnees.length} événements datés, ${rangs.length} sur les rangs. `+
-    `Source : ${CSV_URL ? "Google Sheet publié" : "fichier events.js"}. `+
-    `Rendu du ${new Date().toLocaleDateString("fr-FR")}.`;
-}
+document.getElementById("btn-signal").addEventListener("click", async () => {
+  const val = id => document.getElementById(id).value.trim();
+  const retour = document.getElementById("signal-retour");
+  const champs = {
+    demandeur: val("f-demandeur"),
+    objet:     val("f-objet"),
+    vigneron:  val("f-vigneron"),
+    periode:   val("f-periode"),
+    notes:     val("f-notes")
+  };
 
-document.querySelectorAll(".onglet").forEach(o => o.addEventListener("click", () => {
-  document.querySelectorAll(".onglet").forEach(x => x.setAttribute("aria-selected", String(x === o)));
-  document.querySelectorAll(".vue").forEach(v => v.classList.remove("active"));
-  document.getElementById("vue-"+o.dataset.vue).classList.add("active");
-}));
-const bc = document.getElementById("mode-complet"), bg = document.getElementById("mode-gdd");
-const bascule = m => { mode = m; bc.setAttribute("aria-pressed", String(m==="complet"));
-  bg.setAttribute("aria-pressed", String(m==="gdd")); rendreTout(); };
-bc.addEventListener("click", () => bascule("complet"));
-bg.addEventListener("click", () => bascule("gdd"));
-document.getElementById("btn-print").addEventListener("click", imprimer);
-document.getElementById("btn-ics").addEventListener("click", genererICS);
+  if(!champs.demandeur || !champs.objet || !champs.vigneron || !champs.periode){
+    retour.className = "retour ko";
+    retour.textContent = "Complétez le demandeur, l'objet, le domaine et la période.";
+    return;
+  }
+
+  const sujet = `Agenda GDD2 — ajout demandé : ${champs.objet} — ${champs.vigneron}`;
+  const corps =
+`Demandeur : ${champs.demandeur}
+Objet : ${champs.objet}
+Vigneron ou domaine : ${champs.vigneron}
+Date ou période souhaitée : ${champs.periode}
+Précisions : ${champs.notes || "—"}
+
+Demande envoyée depuis l'agenda événements GDD2 x VINOM.`;
+
+  if(WORKER_URL){
+    retour.className = "retour";
+    retour.textContent = "Envoi en cours…";
+    try{
+      const r = await fetch(WORKER_URL, {
+        method:"POST",
+        headers:{"Content-Type":"application/json"},
+        body: JSON.stringify({...champs, sujet, corps, destinataire: EMAIL_ALERTE})
+      });
+      if(!r.ok) throw new Error("HTTP " + r.status);
+      retour.className = "retour ok";
+      retour.textContent = "Demande envoyée. Merci.";
+      ["f-demandeur","f-objet","f-vigneron","f-periode","f-notes"]
+        .forEach(i => document.getElementById(i).value = "");
+      return;
+    }catch(err){
+      console.warn("Envoi direct impossible, bascule sur la messagerie.", err);
+      retour.className = "retour";
+      retour.textContent = "Ouverture de votre messagerie…";
+    }
+  }
+  window.location.href =
+    `mailto:${EMAIL_ALERTE}?subject=${encodeURIComponent(sujet)}&body=${encodeURIComponent(corps)}`;
+});
 
 (async () => {
-  construireFenetre(); rendreFiltres(); rendreSelecteur();
+  construireFenetre();
+  document.getElementById("sous").textContent =
+    fenetre.map(m => MOIS[m.getMonth()] + " " + m.getFullYear()).join(" · ");
+
   const brut = await chargerDonnees();
-  donnees = prepare(brut); rangs = prepareRangs(brut);
-  rendreTout();
+  const donnees = prepare(brut);
+  const rangs = prepareRangs(brut);
+
+  const nb = rendreGrille(donnees);
+  rendreRangs(rangs);
+  rendreApres(donnees);
+
+  document.getElementById("pied").textContent =
+    `${nb} événement${nb>1?"s":""} sur la fenêtre, ${rangs.length} sur les rangs. `+
+    `Source : ${CSV_URL ? "Google Sheet publié" : "fichier events.js"}. `+
+    `Rendu du ${new Date().toLocaleDateString("fr-FR")}.`;
 })();
 </script>
 </body>
