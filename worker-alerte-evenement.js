@@ -64,8 +64,7 @@ Précisions : ${notes || "—"}
 
 Demande envoyée depuis l'agenda événements GDD2 x VINOM.`;
 
-    const destinataire = /^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(d.destinataire || "")
-      ? d.destinataire : env.MJ_EXPEDITEUR;
+const destinataire = env.EMAIL_DESTINATAIRE || env.MJ_EXPEDITEUR;
 
     const reponse = await fetch("https://api.mailjet.com/v3.1/send", {
       method: "POST",
