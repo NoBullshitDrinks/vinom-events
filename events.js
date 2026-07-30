@@ -15,7 +15,7 @@
    Composantes séparées par des barres verticales.
    ========================================================= */
 
-const CSV_URL = "https://agenda-alerte-worker.lecoindalex.workers.dev/";
+const CSV_URL = "";
 
 /* Bouton « Signaler un événement »
    EMAIL_ALERTE : destinataire des demandes d'ajout.
