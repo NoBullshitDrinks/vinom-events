@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Agenda événements 6 mois — GDD2 Batignolles × VINOM</title>
+<title>VINOM × Les Gouttes de Dieu — agenda des événements</title>
 <style>
 :root{
   --bleu-nuit:#1F4E79; --bleu:#2E75B6; --jaune:#FFF2CC; --jaune-bord:#FFC000;
@@ -135,7 +135,7 @@ footer hr{border:0;border-top:1px solid var(--trait);margin:0 0 12px}
 <body>
 
 <header class="bandeau">
-  <h1>Agenda événements — GDD2 Batignolles &amp; VINOM</h1>
+  <h1>VINOM × Les Gouttes de Dieu — agenda des événements</h1>
   <p class="sous">Six mois glissants · journées vigneron, Master Class, sorties clients, salons</p>
   <div class="barre">
     <div class="onglets" role="tablist">
@@ -398,7 +398,7 @@ function imprimer(){
   const lib = choix === "tous" ? "Six mois"
     : (() => { const [a,mm] = choix.split("-"); return MOIS[+mm-1]+" "+a; })();
   document.getElementById("entete-print").innerHTML =
-    `<h1>Les Gouttes de Dieu Batignolles × VINOM — ${vue.id === "vue-creneaux" ? "créneaux disponibles" : "événements"}</h1>
+    `<h1>VINOM × Les Gouttes de Dieu — ${vue.id === "vue-creneaux" ? "créneaux disponibles" : "événements"}</h1>
      <p>${lib} — édité le ${new Date().toLocaleDateString("fr-FR")}</p>`;
   window.print();
 }

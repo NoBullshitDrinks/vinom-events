@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Agenda 3 mois — GDD2 Batignolles × VINOM</title>
+<title>VINOM × Les Gouttes de Dieu — agenda des trois prochains mois</title>
 <style>
 :root{
   --bleu-nuit:#1F4E79; --bleu:#2E75B6; --bleu-pale:#DEEBF7; --jaune:#FFF2CC; --jaune-bord:#FFC000;
@@ -110,7 +110,7 @@ footer hr{border:0;border-top:1px solid var(--trait);margin:0 0 12px}
 <body>
 
 <header class="bandeau">
-  <h1>Agenda des trois prochains mois — GDD2 Batignolles &amp; VINOM</h1>
+  <h1>VINOM × Les Gouttes de Dieu — agenda des trois prochains mois</h1>
   <p class="sous" id="sous"></p>
   <div class="barre">
     <button class="btn plein" id="btn-print">Imprimer</button>
@@ -240,7 +240,7 @@ function rendreApres(donnees){
 
 document.getElementById("btn-print").addEventListener("click", () => {
   document.getElementById("entete-print").innerHTML =
-    `<h1>Les Gouttes de Dieu Batignolles × VINOM — agenda des trois prochains mois</h1>
+    `<h1>VINOM × Les Gouttes de Dieu — agenda des trois prochains mois</h1>
      <p>${fenetre.map(m => MOIS[m.getMonth()]).join(" · ")} ${fenetre[2].getFullYear()} — édité le ${new Date().toLocaleDateString("fr-FR")}</p>`;
   window.print();
 });

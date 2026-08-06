@@ -1,6 +1,6 @@
 /* =========================================================
    AGENDA ÉVÉNEMENTS GDD2 × VINOM — source de données
-   v2.0 — 30/07/2026
+   v2.1 — 06/08/2026
    Fichier partagé par index.html (6 mois) et agenda-3mois.html.
    ---------------------------------------------------------
    Deux modes :
@@ -33,7 +33,8 @@ const TYPES = {
   SO:   {nom:"Sortie clients",       badge:"Sortie",        couleur:"#C55A11", occupeGDD2:false},
   SP:   {nom:"Salon professionnel",  badge:"Salon",         couleur:"#7A5C00", occupeGDD2:false},
   PRIV: {nom:"Privatisation",        badge:"Privatisation", couleur:"#7030A0", occupeGDD2:true},
-  FERM: {nom:"Fermeture",            badge:"Fermeture",     couleur:"#C00000", occupeGDD2:true}
+  FERM: {nom:"Fermeture",            badge:"Fermeture",     couleur:"#C00000", occupeGDD2:true},
+  RC:   {nom:"Réunion commerciale",  badge:"Interne",       couleur:"#5A6B7B", occupeGDD2:false}
 };
 
 /* Types qui consomment le quota mensuel de soirées GDD2 */
@@ -47,6 +48,20 @@ const REGLES = {
 };
 
 const EVENTS = [
+  {
+    Date:"28/08/2026", Heure_debut:"", Heure_fin:"", Type:"RC",
+    Titre:"Déplacement équipe VINOM — Les Vins J.M. AUJOUX (jour 1)",
+    Fournisseur:"Les Vins J.M. AUJOUX",
+    Lieu:"44 rue des Sarments, 69820 Fleurie", Public:"Interne", Statut:"Confirmé",
+    Composantes:"Visite du domaine|Réunion commerciale", Jauge:"", Lien:""
+  },
+  {
+    Date:"29/08/2026", Heure_debut:"", Heure_fin:"", Type:"RC",
+    Titre:"Déplacement équipe VINOM — Les Vins J.M. AUJOUX (jour 2)",
+    Fournisseur:"Les Vins J.M. AUJOUX",
+    Lieu:"44 rue des Sarments, 69820 Fleurie", Public:"Interne", Statut:"Confirmé",
+    Composantes:"Visite du domaine|Réunion commerciale", Jauge:"", Lien:""
+  },
   {
     Date:"26/09/2026", Heure_debut:"", Heure_fin:"", Type:"SO",
     Titre:"Sortie vendanges avec les clients",
