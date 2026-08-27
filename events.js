@@ -79,7 +79,7 @@ const EVENTS = [
   },
   {
     Date:"26/09/2026", Heure_debut:"", Heure_fin:"", Type:"SO",
-    Titre:"Sortie vendanges avec les clients",
+    Titre:"Sortie vendanges avec les clients GDD",
     Fournisseur:"Domaine la Bouche du Roi",
     Lieu:"Davron (78)", Public:"B2C", Statut:"Confirmé",
     Composantes:"", Jauge:"", Lien:""
@@ -93,14 +93,14 @@ const EVENTS = [
   },
   {
     Date:"04/10/2026", Heure_debut:"", Heure_fin:"", Type:"DEP",
-    Titre:"Déplacement équipe GDD — Seguin-Manuel (jour 1, à confirmer)",
+    Titre:"Déplacement équipe GDD — Seguin-Manuel (jour 1, à confirmer pour équipe VINOM)",
     Fournisseur:"Seguin-Manuel",
     Lieu:"2 rue de l'Arquebuse, 21200 Beaune", Public:"Mixte", Statut:"Confirmé",
     Composantes:"Visite du domaine|Dégustation Domaine de Vénus", Jauge:"10", Lien:""
   },
   {
     Date:"05/10/2026", Heure_debut:"", Heure_fin:"", Type:"DEP",
-    Titre:"Déplacement équipe GDD — Seguin-Manuel (jour 2, à confirmer)",
+    Titre:"Déplacement équipe GDD — Seguin-Manuel (jour 2, à confirmer pour équipe VINOM)",
     Fournisseur:"Seguin-Manuel",
     Lieu:"2 rue de l'Arquebuse, 21200 Beaune", Public:"Mixte", Statut:"Confirmé",
     Composantes:"Visite du domaine|Dégustation Domaine de Vénus", Jauge:"10", Lien:""
