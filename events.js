@@ -1,6 +1,6 @@
 /* =========================================================
    AGENDA ÉVÉNEMENTS GDD2 × VINOM — source de données
-   v2.1 — 06/08/2026
+   v2.2 — 27/08/2026
    Fichier partagé par index.html (6 mois) et agenda-3mois.html.
    ---------------------------------------------------------
    Deux modes :
@@ -34,7 +34,8 @@ const TYPES = {
   SP:   {nom:"Salon professionnel",  badge:"Salon",         couleur:"#7A5C00", occupeGDD2:false},
   PRIV: {nom:"Privatisation",        badge:"Privatisation", couleur:"#7030A0", occupeGDD2:true},
   FERM: {nom:"Fermeture",            badge:"Fermeture",     couleur:"#C00000", occupeGDD2:true},
-  RC:   {nom:"Réunion commerciale",  badge:"Interne",       couleur:"#5A6B7B", occupeGDD2:false}
+  RC:   {nom:"Réunion commerciale",  badge:"Réunion",       couleur:"#5A6B7B", occupeGDD2:false},
+  DEP:  {nom:"Déplacement",          badge:"Déplacement",   couleur:"#8C6D3F", occupeGDD2:false}
 };
 
 /* Types qui consomment le quota mensuel de soirées GDD2 */
@@ -49,18 +50,32 @@ const REGLES = {
 
 const EVENTS = [
   {
-    Date:"28/08/2026", Heure_debut:"", Heure_fin:"", Type:"RC",
+    Date:"28/08/2026", Heure_debut:"", Heure_fin:"", Type:"DEP",
     Titre:"Déplacement équipe VINOM — Les Vins J.M. AUJOUX (jour 1)",
     Fournisseur:"Les Vins J.M. AUJOUX",
     Lieu:"44 rue des Sarments, 69820 Fleurie", Public:"Interne", Statut:"Confirmé",
     Composantes:"Visite du domaine|Réunion commerciale", Jauge:"", Lien:""
   },
   {
-    Date:"29/08/2026", Heure_debut:"", Heure_fin:"", Type:"RC",
+    Date:"29/08/2026", Heure_debut:"", Heure_fin:"", Type:"DEP",
     Titre:"Déplacement équipe VINOM — Les Vins J.M. AUJOUX (jour 2)",
     Fournisseur:"Les Vins J.M. AUJOUX",
     Lieu:"44 rue des Sarments, 69820 Fleurie", Public:"Interne", Statut:"Confirmé",
     Composantes:"Visite du domaine|Réunion commerciale", Jauge:"", Lien:""
+  },
+  {
+    Date:"04/09/2026", Heure_debut:"12:30", Heure_fin:"", Type:"RC",
+    Titre:"Déjeuner Champagne Gosset — vendeurs VINOM",
+    Fournisseur:"Champagne Gosset",
+    Lieu:"Chez Fred, 190 bis boulevard Pereire, 75017 Paris", Public:"Interne", Statut:"Confirmé",
+    Composantes:"", Jauge:"", Lien:""
+  },
+  {
+    Date:"25/09/2026", Heure_debut:"12:30", Heure_fin:"", Type:"RC",
+    Titre:"Déjeuner équipe VINOM — Cheval Quancard",
+    Fournisseur:"Cheval Quancard",
+    Lieu:"GDD2 Batignolles (à confirmer)", Public:"Interne", Statut:"Confirmé",
+    Composantes:"", Jauge:"", Lien:""
   },
   {
     Date:"26/09/2026", Heure_debut:"", Heure_fin:"", Type:"SO",
@@ -68,6 +83,27 @@ const EVENTS = [
     Fournisseur:"Domaine la Bouche du Roi",
     Lieu:"Davron (78)", Public:"B2C", Statut:"Confirmé",
     Composantes:"", Jauge:"", Lien:""
+  },
+  {
+    Date:"02/10/2026", Heure_debut:"09:00", Heure_fin:"12:00", Type:"RC",
+    Titre:"Réunion vendeurs — M. Chapoutier et Maison Aegerter",
+    Fournisseur:"M. Chapoutier / Maison Aegerter",
+    Lieu:"GDD2 Batignolles", Public:"Interne", Statut:"Confirmé",
+    Composantes:"", Jauge:"", Lien:""
+  },
+  {
+    Date:"04/10/2026", Heure_debut:"", Heure_fin:"", Type:"DEP",
+    Titre:"Déplacement équipe GDD — Seguin-Manuel (jour 1, à confirmer)",
+    Fournisseur:"Seguin-Manuel",
+    Lieu:"2 rue de l'Arquebuse, 21200 Beaune", Public:"Mixte", Statut:"Confirmé",
+    Composantes:"Visite du domaine|Dégustation Domaine de Vénus", Jauge:"10", Lien:""
+  },
+  {
+    Date:"05/10/2026", Heure_debut:"", Heure_fin:"", Type:"DEP",
+    Titre:"Déplacement équipe GDD — Seguin-Manuel (jour 2, à confirmer)",
+    Fournisseur:"Seguin-Manuel",
+    Lieu:"2 rue de l'Arquebuse, 21200 Beaune", Public:"Mixte", Statut:"Confirmé",
+    Composantes:"Visite du domaine|Dégustation Domaine de Vénus", Jauge:"10", Lien:""
   },
   {
     Date:"05/10/2026", Heure_debut:"09:30", Heure_fin:"16:30", Type:"SP",
@@ -78,9 +114,9 @@ const EVENTS = [
   },
   {
     Date:"05/10/2026", Heure_debut:"", Heure_fin:"", Type:"SP",
-    Titre:"Dégustation annuelle Louis Latour",
+    Titre:"Dégustation annuelle Louis Latour — retours avant le 21/08 faits ?",
     Fournisseur:"Maison Louis Latour",
-    Lieu:"Automobile Club de France, place de la Concorde", Public:"B2B", Statut:"Confirmé",
+    Lieu:"Automobile Club de France, 6 place de la Concorde, 75008 Paris", Public:"B2B", Statut:"Confirmé",
     Composantes:"", Jauge:"", Lien:""
   },
   {
