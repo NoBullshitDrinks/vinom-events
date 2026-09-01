@@ -1,6 +1,6 @@
 /* =========================================================
    AGENDA ÉVÉNEMENTS GDD2 × VINOM — source de données
-   v2.2 — 27/08/2026
+   v2.3 — 01/09/2026
    Fichier partagé par index.html (6 mois) et agenda-3mois.html.
    ---------------------------------------------------------
    Deux modes :
@@ -78,6 +78,13 @@ const EVENTS = [
     Composantes:"", Jauge:"", Lien:""
   },
   {
+    Date:"18/09/2026", Heure_debut:"", Heure_fin:"", Type:"MC",
+    Titre:"Domaine de la Grande Sieste",
+    Fournisseur:"Domaine de la Grande Sieste",
+    Lieu:"GDD2 Batignolles", Public:"B2C", Statut:"Confirmé",
+    Composantes:"", Jauge:"", Lien:""
+  },
+  {
     Date:"26/09/2026", Heure_debut:"", Heure_fin:"", Type:"SO",
     Titre:"Sortie vendanges avec les clients GDD",
     Fournisseur:"Domaine la Bouche du Roi",
@@ -124,6 +131,13 @@ const EVENTS = [
     Titre:"Château Latour-Martillac",
     Fournisseur:"Château Latour-Martillac",
     Lieu:"GDD2 Batignolles", Public:"B2C", Statut:"Confirmé",
+    Composantes:"", Jauge:"", Lien:""
+  },
+  {
+    Date:"12/10/2026", Heure_debut:"", Heure_fin:"", Type:"SP",
+    Titre:"Salon Bourgogne de Vigne en Verre",
+    Fournisseur:"Bourgogne de Vigne en Verre",
+    Lieu:"à définir", Public:"B2B", Statut:"Confirmé",
     Composantes:"", Jauge:"", Lien:""
   },
   {
