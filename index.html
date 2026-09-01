@@ -165,7 +165,7 @@ let fenetre = [];
 /* Les trois mois à venir, à partir du mois prochain. */
 function construireFenetre(){
   fenetre = [];
-  const base = new Date(AUJOURDHUI.getFullYear(), AUJOURDHUI.getMonth()+1, 1);
+  const base = new Date(AUJOURDHUI.getFullYear(), AUJOURDHUI.getMonth(), 1);
   for(let i=0;i<3;i++) fenetre.push(new Date(base.getFullYear(), base.getMonth()+i, 1));
 }
 
