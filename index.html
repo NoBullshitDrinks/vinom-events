@@ -29,10 +29,8 @@ main{max-width:1120px;margin:0 auto;padding:22px 18px 60px}
 table{width:100%;border-collapse:collapse;table-layout:fixed}
 thead th{background:var(--bleu-nuit);color:#fff;padding:10px 12px;text-align:left;
   font-size:12px;font-weight:700;letter-spacing:.07em;text-transform:uppercase}
-thead th:first-child{width:23%}
 tbody td{border-top:1px solid var(--trait);border-left:1px solid var(--gris-clair);padding:9px 10px;vertical-align:top}
-tbody td:first-child{border-left:0;background:var(--bleu-pale);font-weight:700;font-size:13.5px;line-height:1.3}
-tbody td:first-child .quoi{display:block;font-weight:400;font-size:11.5px;color:var(--gris);margin-top:2px}
+tbody td:first-child{border-left:0}
 
 .jour{display:block;font-size:11px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--gris)}
 .num{display:block;font-size:26px;font-weight:700;line-height:1;color:var(--bleu-nuit);margin:1px 0 5px}
@@ -102,7 +100,6 @@ footer hr{border:0;border-top:1px solid var(--trait);margin:0 0 12px}
   tbody td{border-left:0}
   tbody td[data-mois]::before{content:attr(data-mois);display:block;font-size:10.5px;font-weight:700;
     letter-spacing:.08em;text-transform:uppercase;color:var(--gris);margin-bottom:5px}
-  thead th:first-child{width:auto}
 }
 @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
 
@@ -178,6 +175,7 @@ function cellule(e){
     <span class="num">${e._d.getDate()}</span>
     <span class="etiq" style="background:${t.couleur}">${t.badge}</span>
     <span class="titre">${echappe(e.Titre)}</span>
+    ${e.Fournisseur && e.Fournisseur !== e.Titre ? `<span class="lieu">${echappe(e.Fournisseur)}</span>` : ""}
     ${e.Lieu ? `<span class="lieu">${echappe(e.Lieu)}</span>` : ""}
     ${heure ? `<span class="heure">${echappe(heure)}</span>` : ""}
     ${p.length ? `<ul class="puces">${p.map(x=>`<li>${echappe(x)}</li>`).join("")}</ul>` : ""}
@@ -190,31 +188,22 @@ function rendreGrille(donnees){
   const dedans = donnees.filter(e => e._d >= debut && e._d <= fin);
 
   document.getElementById("entetes").innerHTML =
-    `<th>Domaine / salon</th>` +
     fenetre.map(m => `<th>${MOIS[m.getMonth()]} ${m.getFullYear()}</th>`).join("");
 
-  /* une ligne par domaine ou salon, triée par première date */
-  const groupes = new Map();
-  dedans.forEach(e => {
-    const k = e.Fournisseur || e.Titre;
-    if(!groupes.has(k)) groupes.set(k, []);
-    groupes.get(k).push(e);
-  });
-  const lignes = [...groupes.entries()].sort((a,b) => a[1][0]._d - b[1][0]._d);
+  /* une colonne par mois, les événements dans l'ordre du calendrier */
+  const cases = fenetre.map(m => {
+    const k = cleMois(m);
+    const duMois = dedans.filter(e => cleMois(e._d) === k);
+    const libelle = MOIS[m.getMonth()] + " " + m.getFullYear();
+    return `<td data-mois="${libelle}">${
+      duMois.length ? duMois.map(cellule).join("")
+                    : `<span class="creneau-libre">Rien de calé</span>`
+    }</td>`;
+  }).join("");
 
-  document.getElementById("corps").innerHTML = lignes.length ? lignes.map(([nom, evts]) => {
-    const nature = [...new Set(evts.map(e => TYPES[e.Type].nom))].join(", ");
-    const cases = fenetre.map(m => {
-      const k = cleMois(m);
-      const dedansMois = evts.filter(e => cleMois(e._d) === k);
-      const libelle = MOIS[m.getMonth()] + " " + m.getFullYear();
-      return `<td data-mois="${libelle}">${
-        dedansMois.length ? dedansMois.map(cellule).join("") : ""
-      }</td>`;
-    }).join("");
-    return `<tr><td>${echappe(nom)}<span class="quoi">${echappe(nature)}</span></td>${cases}</tr>`;
-  }).join("")
-  : `<tr><td colspan="4" style="padding:20px;color:var(--gris);font-style:italic">Aucun événement programmé sur les trois prochains mois.</td></tr>`;
+  document.getElementById("corps").innerHTML = dedans.length
+    ? `<tr>${cases}</tr>`
+    : `<tr><td colspan="3" style="padding:20px;color:var(--gris);font-style:italic">Aucun événement programmé sur les trois prochains mois.</td></tr>`;
 
   return dedans.length;
 }
