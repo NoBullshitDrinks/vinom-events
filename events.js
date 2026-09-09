@@ -1,6 +1,6 @@
 /* =========================================================
    AGENDA ÉVÉNEMENTS GDD2 × VINOM — source de données
-   v2.3 — 01/09/2026
+   v2.4 — 09/09/2026
    Fichier partagé par index.html (6 mois) et agenda-3mois.html.
    ---------------------------------------------------------
    Deux modes :
@@ -135,6 +135,13 @@ const EVENTS = [
   },
   {
     Date:"12/10/2026", Heure_debut:"", Heure_fin:"", Type:"SP",
+    Titre:"Date limite de commande — Champagne Week",
+    Fournisseur:"",
+    Lieu:"", Public:"Interne", Statut:"Confirmé",
+    Composantes:"", Jauge:"", Lien:""
+  },
+  {
+    Date:"12/10/2026", Heure_debut:"", Heure_fin:"", Type:"SP",
     Titre:"Salon Bourgogne de Vigne en Verre",
     Fournisseur:"Bourgogne de Vigne en Verre",
     Lieu:"à définir", Public:"B2B", Statut:"Confirmé",
@@ -146,6 +153,34 @@ const EVENTS = [
     Fournisseur:"Vigouroux",
     Lieu:"Clientèle Île-de-France + GDD2 Batignolles", Public:"Mixte", Statut:"Confirmé",
     Composantes:"Tournée VINOM|Mini-salon VINOM|Master Class GDD", Jauge:"", Lien:""
+  },
+  {
+    Date:"19/10/2026", Heure_debut:"", Heure_fin:"", Type:"SP",
+    Titre:"Champagne Week — du 19 au 25 octobre",
+    Fournisseur:"",
+    Lieu:"", Public:"Mixte", Statut:"Confirmé",
+    Composantes:"", Jauge:"", Lien:""
+  },
+  {
+    Date:"20/10/2026", Heure_debut:"", Heure_fin:"", Type:"SP",
+    Titre:"Clôture des commandes — Beaujolais Nouveau 2026",
+    Fournisseur:"",
+    Lieu:"", Public:"Interne", Statut:"Confirmé",
+    Composantes:"", Jauge:"", Lien:""
+  },
+  {
+    Date:"23/10/2026", Heure_debut:"", Heure_fin:"", Type:"SP",
+    Titre:"Champagne Day",
+    Fournisseur:"",
+    Lieu:"", Public:"Mixte", Statut:"Confirmé",
+    Composantes:"", Jauge:"", Lien:""
+  },
+  {
+    Date:"19/11/2026", Heure_debut:"", Heure_fin:"", Type:"SP",
+    Titre:"Beaujolais Nouveau 2026 — mise en vente",
+    Fournisseur:"",
+    Lieu:"", Public:"Mixte", Statut:"Confirmé",
+    Composantes:"", Jauge:"", Lien:""
   },
   {
     Date:"02/12/2026", Heure_debut:"", Heure_fin:"", Type:"JV",
