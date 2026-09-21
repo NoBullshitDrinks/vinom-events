@@ -1,6 +1,6 @@
 /* =========================================================
    AGENDA ÉVÉNEMENTS GDD2 × VINOM — source de données
-   v2.5 — 09/09/2026
+   v2.6 — 09/09/2026
    Fichier partagé par index.html (6 mois) et agenda-3mois.html.
    ---------------------------------------------------------
    Deux modes :
@@ -93,6 +93,13 @@ const EVENTS = [
     Composantes:"", Jauge:"", Lien:""
   },
   {
+    Date:"28/09/2026", Heure_debut:"10:00", Heure_fin:"18:00", Type:"RC",
+    Titre:"Journée agents Caviar de Neuvic",
+    Fournisseur:"Caviar de Neuvic",
+    Lieu:"Comptoir Caviar de Neuvic, 16 rue de l'Odéon, 75006 Paris", Public:"Interne", Statut:"Confirmé",
+    Composantes:"Dégustation caviar, dont le Naccarii|Confit d'esturgeon fumé|Jambon ibérique Cinco Jotas|RSVP obligatoire avant le 10/09", Jauge:"", Lien:"https://nobullshitdrinks.github.io/vinom-promos/caviar-neuvic-28-septembre.html"
+  },
+  {
     Date:"02/10/2026", Heure_debut:"09:00", Heure_fin:"12:00", Type:"RC",
     Titre:"Réunion vendeurs — M. Chapoutier et Maison Aegerter",
     Fournisseur:"M. Chapoutier / Maison Aegerter",
@@ -142,11 +149,18 @@ const EVENTS = [
     Composantes:"", Jauge:"", Lien:""
   },
   {
-    Date:"12/10/2026", Heure_debut:"", Heure_fin:"", Type:"SP",
+    Date:"12/10/2026", Heure_debut:"10:00", Heure_fin:"18:00", Type:"SP",
     Titre:"Salon Bourgogne de Vigne en Verre",
     Fournisseur:"Bourgogne de Vigne en Verre",
-    Lieu:"à définir", Public:"B2B", Statut:"Confirmé",
-    Composantes:"", Jauge:"", Lien:""
+    Lieu:"Restaurant Sourire Trousseau, 12 rue Théophile Roussel, 75012 Paris (métro Ledru-Rollin)", Public:"B2B", Statut:"Confirmé",
+    Composantes:"Entrée libre", Jauge:"", Lien:"https://www.bourgogne-vigne-verre.com"
+  },
+  {
+    Date:"12/10/2026", Heure_debut:"10:30", Heure_fin:"18:30", Type:"SP",
+    Titre:"10e Salon Pardela — Wines & Spirits",
+    Fournisseur:"Pardela Wines & Spirits",
+    Lieu:"Pavillon Ledoyen, 8 avenue Dutuit, 75008 Paris", Public:"B2B", Statut:"Confirmé",
+    Composantes:"Agents VINOM invités au déjeuner avec M. Lurton|Retour souhaité : chd@pardelawines.com — 05 57 55 12 19", Jauge:"", Lien:""
   },
   {
     Date:"13/10/2026", Heure_debut:"", Heure_fin:"", Type:"JV",
