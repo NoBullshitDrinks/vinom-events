@@ -1,6 +1,6 @@
 /* =========================================================
    AGENDA ÉVÉNEMENTS GDD2 × VINOM — source de données
-   v2.6 — 09/09/2026
+   v2.7 — 16/09/2026
    Fichier partagé par index.html (6 mois) et agenda-3mois.html.
    ---------------------------------------------------------
    Deux modes :
@@ -72,6 +72,20 @@ const EVENTS = [
     Composantes:"", Jauge:"", Lien:""
   },
   {
+    Date:"23/09/2026", Heure_debut:"12:30", Heure_fin:"", Type:"RC",
+    Titre:"Déjeuner — Mathieu, Le Jas des Papes et Domaine du Pavillon",
+    Fournisseur:"Le Jas des Papes",
+    Lieu:"La Table d'Anatole, 50 rue Anatole France, 92300 Levallois-Perret", Public:"Interne", Statut:"Confirmé",
+    Composantes:"", Jauge:"", Lien:""
+  },
+  {
+    Date:"23/09/2026", Heure_debut:"", Heure_fin:"", Type:"MC",
+    Titre:"Famille Audibert — Châteauneuf-du-Pape",
+    Fournisseur:"Le Jas des Papes",
+    Lieu:"GDD2 Batignolles", Public:"B2C", Statut:"Confirmé",
+    Composantes:"Soirée animée par le vigneron", Jauge:"", Lien:""
+  },
+  {
     Date:"25/09/2026", Heure_debut:"12:30", Heure_fin:"", Type:"RC",
     Titre:"Déjeuner équipe VINOM — Cheval Quancard",
     Fournisseur:"Cheval Quancard",
@@ -98,6 +112,13 @@ const EVENTS = [
     Fournisseur:"Caviar de Neuvic",
     Lieu:"Comptoir Caviar de Neuvic, 16 rue de l'Odéon, 75006 Paris", Public:"Interne", Statut:"Confirmé",
     Composantes:"Dégustation caviar, dont le Naccarii|Confit d'esturgeon fumé|Jambon ibérique Cinco Jotas|RSVP obligatoire avant le 10/09", Jauge:"", Lien:"https://nobullshitdrinks.github.io/vinom-promos/caviar-neuvic-28-septembre.html"
+  },
+  {
+    Date:"30/09/2026", Heure_debut:"", Heure_fin:"", Type:"TV",
+    Titre:"Clos Regain à Paris — Alice Vidal",
+    Fournisseur:"Clos Regain (Jurançon)",
+    Lieu:"Tournées clientèle Paris", Public:"Interne", Statut:"Confirmé",
+    Composantes:"Créneaux libres : mercredi 30/09 après-midi ou jeudi 01/10 matin|Jeudi 01/10 après-midi : tournée avec Jean-Yves (déjeuner 13h30)|Autres dates disponibles : 27-28-29/10|Réserver : commercial@closregain.fr — 07 66 22 60 43", Jauge:"", Lien:"https://closregain.fr/"
   },
   {
     Date:"02/10/2026", Heure_debut:"09:00", Heure_fin:"12:00", Type:"RC",
@@ -164,8 +185,8 @@ const EVENTS = [
   },
   {
     Date:"13/10/2026", Heure_debut:"", Heure_fin:"", Type:"JV",
-    Titre:"Vigouroux",
-    Fournisseur:"Vigouroux",
+    Titre:"Journée vigneron — Vigouroux annulé, remplacement en cours",
+    Fournisseur:"",
     Lieu:"Clientèle Île-de-France + GDD2 Batignolles", Public:"Mixte", Statut:"Confirmé",
     Composantes:"Tournée VINOM|Mini-salon VINOM|Master Class GDD", Jauge:"", Lien:""
   },
