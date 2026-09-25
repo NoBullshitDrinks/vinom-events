@@ -1,6 +1,6 @@
 /* =========================================================
    AGENDA ÉVÉNEMENTS GDD2 × VINOM — source de données
-   v2.7 — 16/09/2026
+   v2.8 — 25/09/2026
    Fichier partagé par index.html (6 mois) et agenda-3mois.html.
    ---------------------------------------------------------
    Deux modes :
@@ -100,13 +100,6 @@ const EVENTS = [
     Composantes:"", Jauge:"", Lien:""
   },
   {
-    Date:"26/09/2026", Heure_debut:"", Heure_fin:"", Type:"SO",
-    Titre:"Sortie vendanges avec les clients GDD",
-    Fournisseur:"Domaine la Bouche du Roi",
-    Lieu:"Davron (78)", Public:"B2C", Statut:"Confirmé",
-    Composantes:"", Jauge:"", Lien:""
-  },
-  {
     Date:"28/09/2026", Heure_debut:"10:00", Heure_fin:"18:00", Type:"RC",
     Titre:"Journée agents Caviar de Neuvic",
     Fournisseur:"Caviar de Neuvic",
@@ -126,20 +119,6 @@ const EVENTS = [
     Fournisseur:"M. Chapoutier / Maison Aegerter",
     Lieu:"GDD2 Batignolles", Public:"Interne", Statut:"Confirmé",
     Composantes:"", Jauge:"", Lien:""
-  },
-  {
-    Date:"04/10/2026", Heure_debut:"", Heure_fin:"", Type:"DEP",
-    Titre:"Déplacement équipe GDD — Seguin-Manuel (jour 1, à confirmer pour équipe VINOM)",
-    Fournisseur:"Seguin-Manuel",
-    Lieu:"2 rue de l'Arquebuse, 21200 Beaune", Public:"Mixte", Statut:"Confirmé",
-    Composantes:"Visite du domaine|Dégustation Domaine de Vénus", Jauge:"10", Lien:""
-  },
-  {
-    Date:"05/10/2026", Heure_debut:"", Heure_fin:"", Type:"DEP",
-    Titre:"Déplacement équipe GDD — Seguin-Manuel (jour 2, à confirmer pour équipe VINOM)",
-    Fournisseur:"Seguin-Manuel",
-    Lieu:"2 rue de l'Arquebuse, 21200 Beaune", Public:"Mixte", Statut:"Confirmé",
-    Composantes:"Visite du domaine|Dégustation Domaine de Vénus", Jauge:"10", Lien:""
   },
   {
     Date:"05/10/2026", Heure_debut:"09:30", Heure_fin:"16:30", Type:"SP",
@@ -163,6 +142,13 @@ const EVENTS = [
     Composantes:"", Jauge:"", Lien:""
   },
   {
+    Date:"08/10/2026", Heure_debut:"19:00", Heure_fin:"", Type:"EV",
+    Titre:"La Chablisienne × Perseverance — vente aux enchères",
+    Fournisseur:"La Chablisienne",
+    Lieu:"Aguttes, 164 bis avenue Charles de Gaulle, 92200 Neuilly-sur-Seine", Public:"B2B", Statut:"Confirmé",
+    Composantes:"Exposition les 6, 7 et 8 octobre|Dégustation le 8 à 19h|Vente aux enchères le 8 à 20h|En présence du Dr Jean-Louis Étienne, médecin explorateur|Les Magnums Vénérables 2017", Jauge:"", Lien:""
+  },
+  {
     Date:"12/10/2026", Heure_debut:"", Heure_fin:"", Type:"EV",
     Titre:"Date limite de commande — Champagne Week",
     Fournisseur:"",
@@ -184,11 +170,18 @@ const EVENTS = [
     Composantes:"Agents VINOM invités au déjeuner avec M. Lurton|Retour souhaité : chd@pardelawines.com — 05 57 55 12 19", Jauge:"", Lien:""
   },
   {
-    Date:"13/10/2026", Heure_debut:"", Heure_fin:"", Type:"JV",
-    Titre:"Journée vigneron — Vigouroux annulé, remplacement en cours",
-    Fournisseur:"",
-    Lieu:"Clientèle Île-de-France + GDD2 Batignolles", Public:"Mixte", Statut:"Confirmé",
-    Composantes:"Tournée VINOM|Mini-salon VINOM|Master Class GDD", Jauge:"", Lien:""
+    Date:"13/10/2026", Heure_debut:"", Heure_fin:"", Type:"MC",
+    Titre:"Domaine Grosbois — Nicolas Grosbois",
+    Fournisseur:"Grosbois — Domaine des Hauts Baigneux",
+    Lieu:"GDD2 Batignolles", Public:"B2C", Statut:"Confirmé",
+    Composantes:"Soirée animée par le vigneron", Jauge:"", Lien:""
+  },
+  {
+    Date:"14/10/2026", Heure_debut:"", Heure_fin:"", Type:"TV",
+    Titre:"Tournée et déjeuner vendeurs — Nicolas Grosbois",
+    Fournisseur:"Grosbois — Domaine des Hauts Baigneux",
+    Lieu:"Clientèle Île-de-France", Public:"Interne", Statut:"Confirmé",
+    Composantes:"Matinée : tournée clientèle avec Nicolas Grosbois|Déjeuner avec tous les vendeurs", Jauge:"", Lien:""
   },
   {
     Date:"19/10/2026", Heure_debut:"", Heure_fin:"", Type:"EV",
