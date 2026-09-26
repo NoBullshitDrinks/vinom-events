@@ -1,6 +1,6 @@
 /* =========================================================
    AGENDA ÉVÉNEMENTS GDD2 × VINOM — source de données
-   v2.8 — 25/09/2026
+   v2.9 — 26/09/2026
    Fichier partagé par index.html (6 mois) et agenda-3mois.html.
    ---------------------------------------------------------
    Deux modes :
@@ -115,7 +115,7 @@ const EVENTS = [
   },
   {
     Date:"02/10/2026", Heure_debut:"09:00", Heure_fin:"12:00", Type:"RC",
-    Titre:"Réunion vendeurs — M. Chapoutier et Maison Aegerter",
+    Titre:"Réunion vendeurs — M. Chapoutier et Maison Aegerter (sous réserve)",
     Fournisseur:"M. Chapoutier / Maison Aegerter",
     Lieu:"GDD2 Batignolles", Public:"Interne", Statut:"Confirmé",
     Composantes:"", Jauge:"", Lien:""
@@ -147,6 +147,13 @@ const EVENTS = [
     Fournisseur:"La Chablisienne",
     Lieu:"Aguttes, 164 bis avenue Charles de Gaulle, 92200 Neuilly-sur-Seine", Public:"B2B", Statut:"Confirmé",
     Composantes:"Exposition les 6, 7 et 8 octobre|Dégustation le 8 à 19h|Vente aux enchères le 8 à 20h|En présence du Dr Jean-Louis Étienne, médecin explorateur|Les Magnums Vénérables 2017", Jauge:"", Lien:""
+  },
+  {
+    Date:"09/10/2026", Heure_debut:"11:45", Heure_fin:"", Type:"RC",
+    Titre:"Dégustation — Domaines Devillard (Château de Chamirey), avec Aurore Devillard",
+    Fournisseur:"Domaines Devillard — Château de Chamirey",
+    Lieu:"GDD2 Batignolles", Public:"Interne", Statut:"Confirmé",
+    Composantes:"Présentation de tous les domaines par Aurore Devillard|Dégustation de toute la gamme|Présence de tous les vendeurs demandée", Jauge:"", Lien:""
   },
   {
     Date:"12/10/2026", Heure_debut:"", Heure_fin:"", Type:"EV",
@@ -182,6 +189,13 @@ const EVENTS = [
     Fournisseur:"Grosbois — Domaine des Hauts Baigneux",
     Lieu:"Clientèle Île-de-France", Public:"Interne", Statut:"Confirmé",
     Composantes:"Matinée : tournée clientèle avec Nicolas Grosbois|Déjeuner avec tous les vendeurs", Jauge:"", Lien:""
+  },
+  {
+    Date:"16/10/2026", Heure_debut:"11:45", Heure_fin:"", Type:"RC",
+    Titre:"Dégustation — Domaine de la Grande Sieste",
+    Fournisseur:"Domaine de la Grande Sieste (carte LOGV)",
+    Lieu:"GDD2 Batignolles", Public:"Interne", Statut:"Confirmé",
+    Composantes:"", Jauge:"", Lien:""
   },
   {
     Date:"19/10/2026", Heure_debut:"", Heure_fin:"", Type:"EV",
