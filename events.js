@@ -1,6 +1,6 @@
 /* =========================================================
    AGENDA ÉVÉNEMENTS GDD2 × VINOM — source de données
-   v2.9 — 26/09/2026
+   v3.0 — 02/10/2026
    Fichier partagé par index.html (6 mois) et agenda-3mois.html.
    ---------------------------------------------------------
    Deux modes :
@@ -174,7 +174,7 @@ const EVENTS = [
     Titre:"10e Salon Pardela — Wines & Spirits",
     Fournisseur:"Pardela Wines & Spirits",
     Lieu:"Pavillon Ledoyen, 8 avenue Dutuit, 75008 Paris", Public:"B2B", Statut:"Confirmé",
-    Composantes:"Agents VINOM invités au déjeuner avec M. Lurton|Retour souhaité : chd@pardelawines.com — 05 57 55 12 19", Jauge:"", Lien:""
+    Composantes:"", Jauge:"", Lien:""
   },
   {
     Date:"13/10/2026", Heure_debut:"", Heure_fin:"", Type:"MC",
@@ -226,11 +226,32 @@ const EVENTS = [
     Composantes:"", Jauge:"", Lien:""
   },
   {
+    Date:"03/11/2026", Heure_debut:"", Heure_fin:"", Type:"TV",
+    Titre:"Clos Regain à Paris — Alice Vidal",
+    Fournisseur:"Clos Regain (Jurançon)",
+    Lieu:"Tournées clientèle Paris", Public:"Interne", Statut:"Confirmé",
+    Composantes:"Tournées les mardi 3 et mercredi 4 novembre|Se positionner pour tourner avec elle|Réserver : commercial@closregain.fr — 07 66 22 60 43", Jauge:"", Lien:"https://closregain.fr/"
+  },
+  {
+    Date:"06/11/2026", Heure_debut:"12:30", Heure_fin:"", Type:"RC",
+    Titre:"Déjeuner et Master Class — M. Lurton",
+    Fournisseur:"Pardela Wines & Spirits",
+    Lieu:"L'Ardoise, 28 rue du Mont Thabor, 75001 Paris", Public:"Interne", Statut:"Confirmé",
+    Composantes:"Master Class sur les vins français de M. Lurton|Agents VINOM invités au déjeuner|Retour souhaité : chd@pardelawines.com — 05 57 55 12 19", Jauge:"", Lien:""
+  },
+  {
     Date:"02/12/2026", Heure_debut:"", Heure_fin:"", Type:"JV",
     Titre:"Caves du Roussillon",
     Fournisseur:"Caves du Roussillon",
     Lieu:"Clientèle Île-de-France + GDD2 Batignolles", Public:"Mixte", Statut:"Confirmé",
     Composantes:"Tournée VINOM|Mini-salon VINOM|Master Class GDD", Jauge:"", Lien:""
+  },
+  {
+    Date:"14/02/2027", Heure_debut:"", Heure_fin:"", Type:"SP",
+    Titre:"Salon Carafon",
+    Fournisseur:"Carafon (groupement de vignerons)",
+    Lieu:"Palais de Tokyo, 13 avenue du Président Wilson, 75116 Paris", Public:"B2B", Statut:"Confirmé",
+    Composantes:"", Jauge:"", Lien:""
   },
   {
     Date:"", Heure_debut:"", Heure_fin:"", Type:"JV",
