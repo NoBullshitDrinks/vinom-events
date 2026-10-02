@@ -1,6 +1,6 @@
 /* =========================================================
    AGENDA ÉVÉNEMENTS GDD2 × VINOM — source de données
-   v3.0 — 02/10/2026
+   v3.1 — 02/10/2026
    Fichier partagé par index.html (6 mois) et agenda-3mois.html.
    ---------------------------------------------------------
    Deux modes :
@@ -224,6 +224,13 @@ const EVENTS = [
     Fournisseur:"",
     Lieu:"", Public:"Mixte", Statut:"Confirmé",
     Composantes:"", Jauge:"", Lien:""
+  },
+  {
+    Date:"30/10/2026", Heure_debut:"09:00", Heure_fin:"12:00", Type:"RC",
+    Titre:"Réunion vendeurs VINOM — dégustation Domaine Faiveley",
+    Fournisseur:"Domaine Faiveley",
+    Lieu:"GDD2 Batignolles", Public:"Interne", Statut:"Confirmé",
+    Composantes:"Dégustation en présence d'Eve Faiveley", Jauge:"", Lien:""
   },
   {
     Date:"03/11/2026", Heure_debut:"", Heure_fin:"", Type:"TV",
