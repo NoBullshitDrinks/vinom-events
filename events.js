@@ -188,7 +188,7 @@ const EVENTS = [
     Titre:"Tournée et déjeuner vendeurs — Nicolas Grosbois",
     Fournisseur:"Grosbois — Domaine des Hauts Baigneux",
     Lieu:"Clientèle Île-de-France", Public:"Interne", Statut:"Confirmé",
-    Composantes:"Matinée : tournée clientèle avec Nicolas Grosbois|Déjeuner avec tous les vendeurs", Jauge:"", Lien:""
+    Composantes:"Matinée : tournée clientèle avec Nicolas Grosbois|Déjeuner au Père Louis 38 rue Monsieur Le Prince, 75006 Paris avec tous les vendeurs", Jauge:"", Lien:""
   },
   {
     Date:"16/10/2026", Heure_debut:"11:45", Heure_fin:"", Type:"RC",
