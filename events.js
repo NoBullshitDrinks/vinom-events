@@ -233,13 +233,6 @@ const EVENTS = [
     Composantes:"Dégustation en présence d'Eve Faiveley", Jauge:"", Lien:""
   },
   {
-    Date:"03/11/2026", Heure_debut:"", Heure_fin:"", Type:"TV",
-    Titre:"Clos Regain à Paris — Alice Vidal",
-    Fournisseur:"Clos Regain (Jurançon)",
-    Lieu:"Tournées clientèle Paris", Public:"Interne", Statut:"Confirmé",
-    Composantes:"Tournées les mardi 3 et mercredi 4 novembre|Se positionner pour tourner avec elle|Réserver : commercial@closregain.fr — 07 66 22 60 43", Jauge:"", Lien:"https://closregain.fr/"
-  },
-  {
     Date:"06/11/2026", Heure_debut:"12:30", Heure_fin:"", Type:"RC",
     Titre:"Déjeuner et Master Class — M. Lurton",
     Fournisseur:"Pardela Wines & Spirits",
