@@ -1,6 +1,6 @@
 /* =========================================================
    AGENDA ÉVÉNEMENTS GDD2 × VINOM — source de données
-   v3.1 — 02/10/2026
+   v3.3 — 04/11/2026
    Fichier partagé par index.html (6 mois) et agenda-3mois.html.
    ---------------------------------------------------------
    Deux modes :
@@ -233,6 +233,13 @@ const EVENTS = [
     Composantes:"Dégustation en présence d'Eve Faiveley", Jauge:"", Lien:""
   },
   {
+    Date:"03/11/2026", Heure_debut:"", Heure_fin:"", Type:"TV",
+    Titre:"Clos Regain à Paris — Alice Vidal",
+    Fournisseur:"Clos Regain (Jurançon)",
+    Lieu:"Tournées clientèle Paris", Public:"Interne", Statut:"Confirmé",
+    Composantes:"Tournées les mardi 3 et mercredi 4 novembre|Mercredi 4 : tournée avec Michele|Déjeuner du 4 ouvert à tous les vendeurs — adresse à venir|Réserver : commercial@closregain.fr — 07 66 22 60 43", Jauge:"", Lien:"https://closregain.fr/"
+  },
+  {
     Date:"06/11/2026", Heure_debut:"12:30", Heure_fin:"", Type:"RC",
     Titre:"Déjeuner et Master Class — M. Lurton",
     Fournisseur:"Pardela Wines & Spirits",
@@ -240,11 +247,60 @@ const EVENTS = [
     Composantes:"Master Class sur les vins français de M. Lurton|Agents VINOM invités au déjeuner|Retour souhaité : chd@pardelawines.com — 05 57 55 12 19", Jauge:"", Lien:""
   },
   {
+    Date:"24/11/2026", Heure_debut:"12:00", Heure_fin:"", Type:"RC",
+    Titre:"Déjeuner-dégustation Gustave Lorentz — Clara Lorentz",
+    Fournisseur:"Gustave Lorentz",
+    Lieu:"Le Comptoir des Résistants, 18 rue du Château d'Eau, 75010 Paris (à confirmer par Michele)", Public:"Interne", Statut:"Confirmé",
+    Composantes:"Tous les vendeurs attendus", Jauge:"", Lien:""
+  },
+  {
+    Date:"24/11/2026", Heure_debut:"19:00", Heure_fin:"", Type:"MC",
+    Titre:"Gustave Lorentz — Clara Lorentz",
+    Fournisseur:"Gustave Lorentz",
+    Lieu:"GDD2 Batignolles", Public:"B2C", Statut:"Confirmé",
+    Composantes:"Soirée animée par Clara Lorentz", Jauge:"", Lien:""
+  },
+  {
+    Date:"26/11/2026", Heure_debut:"", Heure_fin:"", Type:"TV",
+    Titre:"Tournée Clara Lorentz dans l'Oise — à confirmer",
+    Fournisseur:"Gustave Lorentz",
+    Lieu:"Clientèle Oise (60)", Public:"Interne", Statut:"Confirmé",
+    Composantes:"Tournée avec Aurélien", Jauge:"", Lien:""
+  },
+  {
     Date:"02/12/2026", Heure_debut:"", Heure_fin:"", Type:"JV",
-    Titre:"Caves du Roussillon",
+    Titre:"Caves du Roussillon — Andy, Philippe Gard et Mathieu Semper",
     Fournisseur:"Caves du Roussillon",
     Lieu:"Clientèle Île-de-France + GDD2 Batignolles", Public:"Mixte", Statut:"Confirmé",
-    Composantes:"Tournée VINOM|Mini-salon VINOM|Master Class GDD", Jauge:"", Lien:""
+    Composantes:"Coume del Mas (Philippe Gard) et Domaine Semper (Mathieu Semper)|Après-midi : tournée Caves du Roussillon, qui se positionne ?|Soirée Master Class aux GDD2", Jauge:"", Lien:""
+  },
+  {
+    Date:"03/12/2026", Heure_debut:"", Heure_fin:"", Type:"TV",
+    Titre:"Tournée Caves du Roussillon — Benoit Brument",
+    Fournisseur:"Caves du Roussillon",
+    Lieu:"Clientèle Île-de-France", Public:"Interne", Statut:"Confirmé",
+    Composantes:"", Jauge:"", Lien:""
+  },
+  {
+    Date:"04/12/2026", Heure_debut:"09:30", Heure_fin:"", Type:"RC",
+    Titre:"Réunion vendeurs VINOM — dégustation Caves du Roussillon",
+    Fournisseur:"Caves du Roussillon",
+    Lieu:"GDD2 Batignolles", Public:"Interne", Statut:"Confirmé",
+    Composantes:"09h30 : réunion vendeurs et dégustation Caves du Roussillon|Dégustation Les Jamelles avec Patrick Van Den Driessche|Dégustation CVBG (Thiénot \u0026 Dufouleur) avec Margaux Dufouleur|Déjeuner sur place, à confirmer|À noter dès maintenant dans vos agendas", Jauge:"", Lien:""
+  },
+  {
+    Date:"05/12/2026", Heure_debut:"", Heure_fin:"", Type:"SO",
+    Titre:"Jumping de Paris — invitation Cheval Quancard",
+    Fournisseur:"Cheval Quancard",
+    Lieu:"Paris Expo Porte de Versailles — entrée VIP", Public:"B2B", Statut:"Confirmé",
+    Composantes:"Restaurant éphémère VIP du Jumping de Paris, en marge du Salon du Cheval|Équipe VINOM, clients et prospects invités par Jean-Thomas Paco", Jauge:"", Lien:""
+  },
+  {
+    Date:"25/01/2027", Heure_debut:"", Heure_fin:"", Type:"EV",
+    Titre:"Déjeuner Carafon aux GDD2 — sous réserve",
+    Fournisseur:"Carafon (groupement de vignerons)",
+    Lieu:"GDD2 Batignolles", Public:"Interne", Statut:"Confirmé",
+    Composantes:"À caler avant le 25/01|Benoit Brument organise", Jauge:"", Lien:""
   },
   {
     Date:"14/02/2027", Heure_debut:"", Heure_fin:"", Type:"SP",
