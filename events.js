@@ -295,6 +295,13 @@ const EVENTS = [
     Lieu:"Paris Expo Porte de Versailles — entrée VIP", Public:"B2B", Statut:"Confirmé",
     Composantes:"Restaurant éphémère VIP du Jumping de Paris, en marge du Salon du Cheval|Équipe VINOM, clients et prospects invités par Jean-Thomas Paco", Jauge:"", Lien:""
   },
+   {
+    Date:"11/12/2026", Heure_debut:"11:00", Heure_fin:"", Type:"RC",
+    Titre:"Déjeuner-dégustation Domaine Serge Laloue",
+    Fournisseur:"Domaine Serge Laloue",
+    Lieu:"GDD2 (sans doute)", Public:"Interne", Statut:"Confirmé",
+    Composantes:"Tous les vendeurs attendus", Jauge:"", Lien:""
+  },
   {
     Date:"25/01/2027", Heure_debut:"", Heure_fin:"", Type:"EV",
     Titre:"Déjeuner Carafon aux GDD2 — sous réserve",
