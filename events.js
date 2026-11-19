@@ -303,11 +303,11 @@ const EVENTS = [
     Composantes:"Tous les vendeurs attendus", Jauge:"", Lien:""
   },
   {
-    Date:"25/01/2027", Heure_debut:"", Heure_fin:"", Type:"EV",
-    Titre:"Déjeuner Carafon aux GDD2 — sous réserve",
+    Date:"13/01/2027", Heure_debut:"10:00", Heure_fin:"16:00", Type:"EV",
+    Titre:"Réunion + Dégustation + Déjeuner Carafon aux GDD2",
     Fournisseur:"Carafon (groupement de vignerons)",
     Lieu:"GDD2 Batignolles", Public:"Interne", Statut:"Confirmé",
-    Composantes:"À caler avant le 25/01|Benoit Brument organise", Jauge:"", Lien:""
+    Composantes:"Jérôme Camps + Vignerons. À noter dans vos agendas!!!", Jauge:"", Lien:""
   },
   {
     Date:"14/02/2027", Heure_debut:"", Heure_fin:"", Type:"SP",
